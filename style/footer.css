@@ -1,0 +1,121 @@
+#footer {
+    position: relative;
+    font-family: tahoma;
+    background-image: url("../img/footer/header_bg.jpg");
+    border-top: 2px solid #e30613;
+    margin-top: 170px;
+}
+
+#footer>.footer-column {
+    width: 21%;
+    float: right;
+    margin-left: 2%;
+    padding: 12px 10px 0px 0px;
+    direction: rtl;
+}
+
+#footer>.footer-column>h3 {
+    font: 14px tahoma;
+    color: #ffffff;
+    border-bottom: 1px solid #f4f4f4;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 10px;
+    height: 44px;
+    line-height: 44px;
+}
+
+#footer>.footer-column>a {
+    border-bottom: 1px dotted #898989;
+    color: #a0a1a2;
+    height: 44px;
+    line-height: 44px;
+    font-size: 12px;
+    transition: color 0.3s;
+    display: block;
+    user-select: none;
+}
+
+#footer>.footer-column>a:last-child {
+    border-bottom: none;
+}
+
+#footer>.footer-logo {
+    background-image: url("../img/footer/footer-logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 238px;
+    height: 161px;
+    float: right;
+    min-height: 18em;
+}
+
+
+/*
+#footer>.footer-link {
+    background-image: url("../img/footer/footer-bottom-bg.png");
+    line-height: 3em;
+    text-align: center;
+    color: #a0a1a2;
+    text-decoration: none;
+    border
+}
+*/
+
+#footer>.footer-column>a:link {
+    user-select: none;
+    color: #a0a1a2;
+    transition: color 0.3s;
+    margin: 0 1em;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+#footer>.footer-column>a:hover {
+    user-select: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+#footer>.footer-column>a:visited {
+    user-select: none;
+    color: #ffffff;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+#footer-nav {
+    width: 1100px;
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+}
+
+#footer-nav>.nav {
+    margin-top: 10px;
+    float: right;
+    border-right: 1px solid #a0a1a2;
+    padding: 0px 8px;
+    height: 10px;
+    line-height: 10px;
+    font-size: 10px;
+}
+
+#footer-nav>.nav:nth-child(1) {
+    margin-right: 415px;
+    border-right: none;
+}
+
+#footer-nav>.nav>a:link {
+    text-decoration: none;
+    color: #a0a1a2;
+}
+
+#footer-nav>.nav>a:visited {
+    text-decoration: none;
+}
+
+#footer-nav>.nav>a:hover {
+    text-decoration: none;
+    color: #f4f4f4;
+}

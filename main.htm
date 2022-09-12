@@ -1,0 +1,894 @@
+﻿<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=1536px, initial-scale=1">
+
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/content-slider.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/mini-slider.css">
+    <link rel="stylesheet" href="style/content-slider2.css">
+    <style>
+        #myBtn {
+            width: 16px;
+            height: 16px;
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background: orange url(img/top.png) no-repeat 50% 50%;
+            background-size: contain;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            font-size: 18px;
+            opacity: 0.55;
+        }
+        
+        #myBtn:hover {
+            background-color: orange;
+            opacity: 1;
+            /* Add a dark-grey background on hover */
+        }
+        
+        #myBtn>img {
+            width: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top">
+            <div class="symbol">
+                <a href="main.htm"></a>
+            </div>
+            <div class="search"><input type="search"></div>
+        </div>
+    </div>
+    <div id="navigatemenu">
+        <ul class="menu">
+            <li class="no-container">صفحه اصلی</li>
+            <li class="container">درباره ملت
+                <div class="submenu">
+                    <ul>
+                        <li class="sub">
+                            <h3>معرفی</h3>
+                        </li>
+                        <li class="sub">
+                            <a>تاریخچه</a>
+                        </li>
+                        <li class="sub">
+                            <a>هیأت مدیره</a>
+                        </li>
+                        <li class="sub">
+                            <a>هیأت عامل</a>
+                        </li>
+                        <li class="sub">
+                            <a>ساختار سازمانی</a>
+                        </li>
+                        <li class="sub">
+                            <a>منشور اخلاقی</a>
+                        </li>
+                        <li class="sub">
+                            <a>افتخارات ملی و بین المللی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>مسئولیت اجتماعی
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>روابط عمومی</h3>
+                        </li>
+                        <li class="sub">
+                            <a>اخبار بانک
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>اخبار بانکی و اقتصادی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>اطلاع رسانی قانون جدید چک
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>شعار بانک ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>نشر آگاهی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>کتابخانه
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پیوندها
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>واحدها</h3>
+                        </li>
+                        <li class="sub">
+                            <a>شعب داخلی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>واحدها، بخش ها و باجه های ارزی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>شعب ارائه دهنده خدمات بیمه ما
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>شعب ارائه دهنده خدمات لیزینگ
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>ادارات کل و مدیریت های شعب
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>شعب و واحد های خارج از کشور
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>رسیدگی به شکایات
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>ستاد خبری حراست
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>ارتباط با ملت
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>امور سهام</h3>
+                        </li>
+                        <li class="sub">
+                            <a>شفافیت مالی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>اخبار بورسی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>اطلاعیه ها
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>ملت در بورس
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>سهام عدالت
+                            </a>
+                        </li>
+                    </ul>
+            </li>
+            <li class="container">خدمات
+                <div class="submenu">
+                    <ul>
+                        <li class="sub">
+                            <h3>سپرده ها و خدمات ریالی
+                            </h3>
+                        </li>
+                        <li class="sub">
+                            <a>قرض الحسنه پس انداز
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>قرض الحسنه ویژه
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>جاری الکترونیک ملت (جام)
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>صدور دسته چک در تمام شعب
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>سرمایه گذاری
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>مهر ماندگار
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>احسان ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>خدمات ویژه مشتریان مهان
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>خدمات پرداخت ویژه
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>محاسبه سود سپرده ها
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>محاسبه شناسه حساب بانکی ایران (شبا)
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>صندوق اجاره ای
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>نرخ حق الوکاله
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>گواهی سپرده سکه طلا
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>تسهیلات و تعهدات ریالی
+                            </h3>
+                        </li>
+                        <li class="sub"><a>قرض الحسنه
+                        </a></li>
+                        <li class="sub"><a>جعاله</a></li>
+                        <li class="sub"><a>فروش اقساطی
+                        </a></li>
+                        <li class="sub"><a>مضاربه</a></li>
+                        <li class="sub"><a>مشارکت مدنی
+                        </a></li>
+                        <li class="sub"><a>اجاره به شرط تملیک
+                        </a></li>
+                        <li class="sub"><a>ضمانت نامه های ریالی
+                        </a></li>
+                        <li class="sub"><a>قراردادهای تسهیلات بانکی
+                        </a></li>
+                        <li class="sub">
+                            <h3>طرح های اعتباری
+                            </h3>
+                        </li>
+                        <li class="sub"><a>خدمات بانکی ویژه بازار سرمایه
+                        </a></li>
+                        <li class="sub"><a>تسهیلات ویژه متخصصان
+                        </a></li>
+                        <li class="sub"><a>تسهیلات ویژه مددجویان بدهکار
+                        </a></li>
+                        <li class="sub"><a>تسهیلات هوشمند فرابانک
+                        </a></li>
+                        <li class="sub"><a>مانی کارت
+                        </a></li>
+                        <li class="sub"><a>شاپ کارت
+                        </a></li>
+                        <li class="sub"><a>طرح حامی
+                        </a></li>
+                        <li class="sub"><a>طرح شایان
+                        </a></li>
+                        <li class="sub"><a>بسته اعتباری پذیرندگان
+                        </a></li>
+
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>سپرده ها و خدمات ارزی
+                            </h3>
+                        </li>
+                        <li class="sub"><a>قرض الحسنه‌
+    </a></li>
+                        <li class="sub"><a>جاری‌</a></li>
+                        <li class="sub"><a>حساب سپرده مدت دار ارزی
+    </a></li>
+                        <li class="sub"><a>حواله های ارزی
+    </a></li>
+                        <li class="sub"><a>سویفت</a></li>
+                        <li class="sub"><a>نرخ ارز
+    </a></li>
+                        <li class="sub"><a>اعتبارات اسنادی
+    </a></li>
+                        <li class="sub"><a>گواهی تمکن مالی
+    </a></li>
+                        <li class="sub"><a>نقشه سفر حواله ارزی از محل ثبت سفارش
+    </a></li>
+                        <li class="sub"><a>نقشه سفر بروات اسنادی وارداتی بدون تعهد
+    </a></li>
+
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>تسهیلات ارزی
+                            </h3>
+                        </li>
+                        <li class="sub"><a>ضمانت نامه
+                        </a></li>
+                        <li class="sub"><a>صندوق توسعه ملی
+                        </a></li>
+                        <li class="sub"><a>ذخیره ارزی
+                        </a></li>
+                        <li class="sub"><a>فاینانس
+                        </a></li>
+                        <li class="sub"><a>ریفاینانس
+                        </a></li>
+                        <li class="sub"><a>تسهیلات کوتاه مدت بانک ECO
+                        </a></li>
+                        <li class="sub"><a>تسهیلات میان مدت بانک ECO
+                        </a></li>
+                        <li class="sub">
+                            <a>تسهیلات ارزی برای تامین سرمایه در گردش
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تسهیلات صادراتی در قالب اعتبار خریدار
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تسهیلات ارزی بانک های توسعه ای
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تسهیلات ارزی از محل منابع داخلی بانک
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تسهیلات ارزی صادراتی میان مدت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تسهیلات ارزی صادراتی کوتاه مدت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تنزیل اسناد اعتبارات اسنادی مدتدار 
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تنزیل اسناد (خرید دین)
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تسهیلات ارزی کوتاه مدت از محل منابع بانک مرکزی
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </li>
+            <li class="container ">بانکداری الکترونیک
+                <div class="submenu">
+                    <ul>
+                        <li class="sub">
+                            <h3>سامانه های مبتنی بر وب
+                            </h3>
+                        </li>
+                        <li class="sub"><a>بانکداری اینترنتی اشخاص حقیقی
+                        </a></li>
+                        <li class="sub"><a>بانکداری اینترنتی صاحبین کسب و کار
+                        </a></li>
+                        <li class="sub"><a>سامانه مدیریت حساب (محب)
+                        </a></li>
+                        <li class="sub"><a>بانکداری اینترنتی اشخاص حقوقی
+                        </a></li>
+                        <li class="sub"><a>بازار سرویس های تبادل الکترونیک  (بستام)
+                        </a></li>
+                        <li class="sub"><a>مشاهده وضعیت کد شهاب
+                        </a></li>
+                        <li class="sub"><a>پرداخت الکترونیک قبوض
+                        </a></li>
+                        <li class="sub"><a>پیگیری تراکنش های ناموفق (سیام)
+                        </a></li>
+                        <li class="sub"><a>فروش شارژ سیم کارت اعتباری
+                        </a></li>
+                        <li class="sub"><a>فروش اینترنتی هدیه کارت
+                        </a></li>
+                        <li class="sub"><a>استعلام ضمانت نامه
+                        </a></li>
+                        <li class="sub"><a>پرداخت اقساط تسهیلات
+                        </a></li>
+                        <li class="sub"><a>محاسبه اقساط تسهیلات
+                        </a></li>
+                        <li class="sub"><a>کمک به سازمان های حمایتی
+                        </a></li>
+                        <li class="sub"><a>واریز وجوه به حساب سازمان ها
+                        </a></li>
+                        <li class="sub"><a>واریز وجوهات شرعی و نذورات
+                        </a></li>
+                        <li class="sub"><a>جمع سپاری مالی
+                        </a></li>
+                        <li class="sub"><a>وب سرویس های بانکی
+                        </a></li>
+                        <li class="sub"><a>سنجش رضایت مشتریان
+                        </a></li>
+                        <li class="sub"><a>رمزنگار واریز گروهی
+                        </a></li>
+                        <li class="sub"><a>سقف روزانه انتقال وجه
+                        </a></li>
+                        <li class="sub"><a>توصیه‌های امنیتی سامانه بانکداری اینترنتی
+                        </a></li>
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>سامانه های مبتنی برتلفن و تلفن همراه
+                            </h3>
+                        </li>
+                        <li class="sub">
+                            <a>تلفن بانک
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>همراه بانک
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>همراه پلاس ملت
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>کیف پول الکترونیکی
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>کد بانک
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>رمزنگار ملت
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>مباشر ملت
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>پیامک بانک
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>راهنمای خدمت یکبار رمز
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>توصیه‌های امنیتی سامانه همراه بانک
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>توصیه های امنیتی سامانه تلفن بانک
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>توصیه های امنیتی سامانه مباشر ملت
+                                </a>
+                        </li>
+                        <li class="sub">
+                            <a>بانک پلاس
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>سایر خدمات الکترونیک</h3>
+                        </li>
+                        <li class="sub">
+                            <a>باشگاه مشتریان ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پایانه های فروش
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پایانه های خودپرداز
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پایانه بانکی غیر نقد
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پایانه های پرداخت الکترونیک شعب
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پایانه های پرداخت بهای سوخت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پایانه های سفارش دهی ویژه
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>برداشت وجه بدون کارت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پرداخت الکترونیک بهای سوخت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>بانک پرداخت-پرداخت های خودکار
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پرداخت ویژه
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>ملت شاپ
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>خودپرداز ارزی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>پایانه های خوددریافت-خودپرداز(CRS)
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>حواله بین بانکی سحاب
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>حواله بین بانکی پایا
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>حواله بین بانکی ساتنا
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>امضاء الکترونیک ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>کمک به مددجویان بدهکار (در جرایم غیر عمد)
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>تأیید لحظه ای واریز وجه به حساب
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>نماچک
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>سقف انتقال وجه کانالهای غیرحضوری
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <li class="sub">
+                            <h3>کارت های بانکی</h3>
+                        </li>
+                        <li class="sub">
+                            <a>ملت کارت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>بن کارت ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>هدیه کارت ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>کارت اعتباری ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>مانی کارت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>مجازی کارت ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>شاپ کارت ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>حامی کارت ملت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>سفر کارت
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>بروشور کارت های بانکی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>توصیه‌های امنیتی استفاده از کارت‌های بانکی
+                            </a>
+                        </li>
+                        <li class="sub">
+                            <a>ملت کارت خانواده
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="no-container">باشگاه مشتریان ملت</li>
+            <li>آگاهی رسانی امنیت اطلاعات</li>
+        </ul>
+        </div>
+        <div id="content">
+            <div id="slider">
+                <p class="light"></p>
+                <div id="gal">
+
+                    <div class="items">
+                        <img src="img/slider/01.jpg">
+                        <p></p>
+                    </div>
+                    <div class="items">
+                        <img src="img/slider/02.jpg">
+                        <p></p>
+                    </div>
+                    <div class="items">
+                        <img src="img/slider/03.jpg">
+                        <p></p>
+                    </div>
+                    <div class="items">
+                        <img src="img/slider/04.jpg">
+                        <p></p>
+                    </div>
+                    <div class="items">
+                        <img src="img/slider/05.jpg">
+                        <p></p>
+                    </div>
+                    <div class="items">
+                        <img src="img/slider/06.jpg">
+                        <p></p>
+                    </div>
+                    <div class="items">
+                        <img src="img/slider/07.jpg">
+                        <p></p>
+                    </div>
+
+                    <div class="items">
+                        <img src="img/slider/08.jpg">
+                        <p></p>
+                    </div>
+
+                </div>
+                <div id="right1"> </div>
+                <div id="left1"> </div>
+            </div>
+
+            <ul id="but">
+                <li class="bbc0" onclick="move(0)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+                <li class="bbc1" onclick="move(1)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+                <li class="bbc2" onclick="move(2)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+                <li class="bbc3" onclick="move(3)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+                <li class="bbc4" onclick="move(4)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+                <li class="bbc5" onclick="move(5)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+                <li class="bbc6" onclick="move(6)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+                <li class="bbc7" onclick="move(7)">
+                    <p class="bot"><input type="button"></p>
+                </li>
+
+            </ul>
+
+
+            <div id="slider2">
+
+                <div id="galer">
+
+                    <div class="items">
+                        <img src="slider2/vize-hamkaran.jpg">
+                    </div>
+
+                    <div class="itscrolly items ">
+                        <img src="slider2/akhbar-h.jpg">
+
+                    </div>
+
+                    <div class="items">
+                        <img src="slider2/dastresi-sarie.jpg">
+
+                    </div>
+
+                    <div class="itscrolly items">
+                        <img src="slider2/arze-roz-h.jpg">
+
+                    </div>
+
+                    <div class="items">
+                        <img src="slider2/khadamat.jpg">
+
+                    </div>
+
+                </div>
+                <ul id="buto">
+                    <li onmouseover="gogo(0)">s </li>
+                    <li onmouseover="gogo(1)">اخبار</li>
+                    <li onmouseover="gogo(2)"> دسترسی سریع </li>
+                    <li onmouseover="gogo(3)"> نرخ ارز روزانه</li>
+                    <li onmouseover="gogo(4)"> خدمات </li>
+                </ul>
+
+
+            </div>
+
+            <div class="minislider">
+                <div id="mini-slider">
+                    <div id="gallery">
+                        <a href="https://www.bankmellat.ir/commercial_banking.aspx" class="item">
+                            <img src="img/mini-slider/ebanking_personal.png">
+                            <h3>بانکداری اینترنتی اشخاص حقوقی</h3>
+                        </a>
+                        <a href="https://bastam.bankmellat.ir/bastam/start" class="item">
+                            <img src="img/mini-slider/ghest.png">
+                            <h3>پرداخت اقساط با کارت</h3>
+                        </a>
+                        <a href="https://www.bankmellat.ir/Mobile_banking.aspx" class="item">
+                            <img src="img/mini-slider/hamrah_bank.png">
+                            <h3>همراه بانک ملت</h3>
+                        </a>
+                        <a href="https://www.bankmellat.ir/Help_support_organizations.aspx" class="item">
+                            <img src="img/mini-slider/hemayati.png">
+                            <h3>کمک به سازمان های حمایتی</h3>
+                        </a>
+                        <a href="https://www.bankmellat.ir/Electronic_payment_of_bill.aspx" class="item">
+                            <img src="img/mini-slider/pardakht_ghoboz.png">
+                            <h3>پرداخت قبوض</h3>
+                        </a>
+                        <a href="https://www.bankmellat.ir/Ramznegar.aspx" class="item">
+                            <img src="img/mini-slider/ramznegar.png">
+                            <h3>سامانه رمزنگار ملت</h3>
+                        </a>
+                        <a href="https://www.bankmellat.ir/2/OnePane/745/1/Link/2/25/1/196.aspx" class="item">
+                            <img src="img/mini-slider/sanjesh_customers.png">
+                            <h3>سنجش رضایت مشتریان</h3>
+                        </a>
+                        <a href="https://www.bankmellat.ir/2/OnePane/745/1/Link/2/25/1/14261.aspx" class="item">
+                            <img src="img/mini-slider/security_advices.png">
+                            <h3>آگاهی رسانی امنیت اطلاعات</h3>
+                        </a>
+                        <a href="https://www.bankmellat.ir/Buy_rechargeable_prepaid.aspx" class="item">
+                            <img src="img/mini-slider/sharj_simcard.png">
+                            <h3>خرید شارژ سیم کارت اعتباری</h3>
+                        </a>
+                        <a href="https://bastam.bankmellat.ir/bastam/sheba_service" class="item">
+                            <img src="img/mini-slider/sheba.png">
+                            <h3>شناسه حساب بانکی ایران(شبا)</h3>
+                        </a>
+
+
+                    </div>
+                    <div id="right"></div>
+                    <div id="left"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer-column">
+                <h3>درباره ملت</h3>
+                <a href="https://www.bankmellat.ir/Organizational_Structure.aspx">ساختار سازمانی</a>
+                <a href="https://www.bankmellat.ir/newsarchive.aspx">آرشیو اخبار</a>
+                <a href="https://www.bankmellat.ir/Letter_of_commendation.aspx">افتخارات بین المللی</a>
+                <a href="http://www.tsetmc.com/loader.aspx?partree=151311&i=778253364357513">ملت در بورس</a>
+                <a href="https://www.bankmellat.ir/Complaints.aspx">رسیدگی به شکایات</a>
+            </div>
+            <div class="footer-column">
+                <h3>شعب و واحدها</h3>
+                <a href="https://www.bankmellat.ir/Local_branches.aspx">شعب داخلی</a>
+                <a href="https://www.bankmellat.ir/Currency_units.aspx">واحد ها،بخش ها و باجه های ارزی</a>
+                <a href="https://www.bankmellat.ir/bimehma_services.aspx">شعب ارائه دهنده خدمات بیمه ما</a>
+                <a href="https://www.bankmellat.ir/Branches_of_administration_and_management.aspx">ادارات کل و مدیریت های
+                شعب</a>
+                <a href="https://www.bankmellat.ir/mellat_contact_center.aspx"> مرکز ارتباط ملت</a>
+            </div>
+            <div class="footer-column">
+                <h3>سایر</h3>
+                <a href="#">شناسه حساب بانکی (شبا)</a>
+                <a href="#">سامانه الکترونیک بستام</a>
+                <a href="#">مشاهده وضعیت کد شهاب</a>
+                <a href="https://www.bankmellat.ir/Tender.aspx">مناقصه ها و مزایده ها</a>
+                <a href="https://www.bankmellat.ir/Special_Service_Associates.aspx">خدمات ویژه همکاران</a>
+            </div>
+
+            <div class="footer-logo"></div>
+            <div id="footer-nav">
+                <div class="nav">
+                    <a href="#">صفحه اصلی</a>
+                </div>
+                <div class="nav">
+                    <a href="#"> ارتباط با ملت</a>
+                </div>
+                <div class="nav">
+                    <a href="#"> پیوندها</a>
+                </div>
+                <div class="nav">
+                    <a href="#"> نقشه سایت</a>
+                </div>
+            </div>
+
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+        <script src="script/slider.js"></script>
+        <script src="script/mini-slider.js"></script>
+        <script>
+            /*slide2*/
+            os = 0;
+
+            function gogo(g) {
+                os = -100 * g;
+                galer.style.left = os + "%";
+            }
+        </script>
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+#header>.top {
+    height: 136px;
+    width: 1100px;
+    margin: 0 auto;
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    margin: 1px auto;
+    z-index: 110;
+}
+
+#header>.top>.symbol {
+    height: 136px;
+    width: 312px;
+    background-image: url("../img/header/01.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    float: right;
+    position: relative;
+    margin: 1px auto;
+}
+
+#header>.top>.symbol>a {
+    position: absolute;
+    height: 80px;
+    width: 300px;
+    bottom: 0;
+    right: 0;
+    margin: 1px auto;
+}
+
+
+/* #55595C; */
+
+#header>.top>.search {
+    width: 190px;
+    height: 29px;
+    position: absolute;
+    margin-top: 70px;
+    right: 71%;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+#header>.top>.search>input:focus {
+    width: 400px;
+    margin-right: -80px;
+    transition: 0.5s;
+    background-color: #fff;
+}
+
+#header>.top>.search>input {
+    font-size: medium;
+    right: 40%;
+    margin-right: -3px;
+    margin-top: -3px;
+    border: 2px solid #55595C;
+    position: relative;
+    background-image: url("../img/header/search-icon-16.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    line-height: 29px;
+    padding-right: 25px;
+    border-radius: 1em;
+    outline: none;
+    background-color: #444648;
+}
+
+
+/****/
+
+#navigatemenu {
+    height: 60px;
+    color: #55595c;
+    background-color: #e7e7e7;
+    font-weight: normal;
+    font: 16px Mj_Flow, tahoma;
+    top: 0;
+    position: sticky;
+    //overflow: hidden;
+    z-index: 100;
+    box-shadow: 2px 3px 4px 0 rgb(0 0 0 / 20%);
+}
+
+ul.menu {
+    /*
+    overflow: hidden;
+    */
+    position: relative;
+    margin: 0px 10px auto;
+    height: 60px;
+    line-height: 60px;
+    list-style-type: none;
+    padding: 0;
+    background-color: #e7e7e7;
+    text-align: center;
+    align-items: center;
+    //border: 2px solid green;
+}
+
+
+/*
+ul.menu>li {
+    float: right;
+}
+*/
+
+ul.menu>li {
+    display: inline-block;
+    margin: 0px 0px 0px 13px;
+}
+
+
+/********/
+
+ul.menu>li>a:link {
+    text-decoration: none;
+    color: #444648;
+}
+
+ul.menu>li>a:active {
+    text-decoration: none;
+    color: #444648;
+}
+
+ul.menu>li>a:visited {
+    text-decoration: none;
+    color: #444648;
+}
+
+ul.menu>li:hover {
+    text-decoration: none;
+    color: red;
+}
+
+ul.menu>li:hover {
+    transition: 0.3s;
+    border-bottom: 3px solid red;
+    color: red;
+    line-height: 55px;
+    height: 55px;
+}
+
+ul.menu>li.container:hover {
+    background: url(../img/header/arrow.down.hover.png) 1% 55%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+}
+
+ul.menu>li.container {
+    /*vasat avardan li va background li*/
+    padding-left: 16px;
+    background: url(../img/header/arrow.down.png) 1% 55%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    z-index: 115;
+}
+
+li.container:hover>.submenu {
+    visibility: visible;
+    transition: 1s;
+    // height: auto;
+    min-height: 300px;
+    max-height: 1200px;
+    transition: 1s;
+    // top: 61px;
+}
+
+li.container>.submenu {
+    top: 61px;
+    z-index: -50;
+    padding-right: -50px;
+    min-height: 0px;
+    max-height: 0px;
+    right: 66px;
+    position: absolute;
+    border: 2px solid #ccc;
+    box-shadow: 0px -1px 10px 1px red inset;
+    width: 958px;
+    background-color: rgb(231, 231, 231, 0.96);
+    text-align: right;
+    padding-bottom: 10px;
+    margin-bottom: -60px;
+    visibility: hidden;
+    /*  height: 0px;
+    overflow-y: auto;*/
+    transition: 1s;
+    /*change height in as you like (me:minimim height)*/
+    //transition: 0.1s;
+    //overflow-x: hidden;
+    // overflow-y: scroll;
+    overflow: hidden;
+    //overflow: scroll;
+}
+
+.submenu>ul {
+    //border: 1px solid yellow;
+    float: right;
+    margin-right: -32px;
+}
+
+ul>li.sub {
+    height: 30px;
+    line-height: 30px;
+    width: 223px;
+    color: #55595C;
+    list-style: none;
+    height: 30px;
+    // border: 1px solid brown;
+}
+
+li.sub>h3 {
+    color: red;
+    font-size: 12px;
+}
+
+a:hover {
+    cursor: pointer;
+    color: orange;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+li.sub>a {
+    font-size: 11px;
+}

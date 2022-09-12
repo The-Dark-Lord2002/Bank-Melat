@@ -1,0 +1,366 @@
+﻿var headerContainerHeight =0;
+var LANGUAGE = "fa";
+
+String.prototype.toPersianDigit = function(a) {
+	return this.replace(/\d+/g, function(digit) {
+		var enDigitArr = [], peDigitArr = [];
+		for (var i = 0; i < digit.length; i++) {
+			enDigitArr.push(digit.charCodeAt(i));
+		}
+		for (var j = 0; j < enDigitArr.length; j++) {
+			peDigitArr.push(String.fromCharCode(enDigitArr[j] + ((!!a && a == true) ? 1584 : 1728)));
+		}
+		return peDigitArr.join('');
+	});
+};
+$(document).ready(function () {
+
+$("li a:contains('همراه بانک')").css( "color", "#ff6a00" );
+$("li a:contains('طرح های اعتباری')").css( "color", "#e0223c !important" );
+$("li a:contains('طرح های اعتباری')").css( "font", "14px Mj_Flow ,tahoma" );
+
+if ($("#ribbon-bar").length > 0) {
+        //$(".container-pane").addClass("admin-view");
+        $("body > form").addClass("admin-view");
+    }else
+	{$("body > form").addClass("public-view");
+	}
+    function TraceNodes(Node) {
+	
+        if ($(Node).hasClass("en-number")) {
+            return true;
+        }
+		if(Node.tagName=="TEXTAREA")
+			return true;
+		
+		
+        if (Node.nodeType == 3)//TextNode
+            Node.nodeValue = Node.nodeValue.toPersianDigit();
+        else
+            for (var i = 0; i < Node.childNodes.length; i++)
+                TraceNodes(Node.childNodes[i]);
+    }
+	
+	TraceNodes(document);
+$("#cp_prjModuleContent23_btnSearch").html("جستجو");
+$("#cp_prjModuleContent652_btnSearch").html("جستجو");
+if(LANGUAGE == "fa"){
+//$("#sp_prjModuleContent23_txtSearch").Watermark("جستجو ...");
+		//$(".keyword-div-input input:first").Watermark("جستجو ...");
+		
+	}else if(LANGUAGE == "en"){
+		//$(".keyword-div-input input:first").Watermark("Search ...");
+	}
+
+$('.news-module a.prjModuleArchiveViewer').text("");
+
+
+$(".default #prjModuleContent174").append("<a class='home-news-archive' target='_blank' href='/2/OnePane/162/1/News/5/174.aspx' >آرشیو اخبار</a>");
+
+$("#prjModuleContent174 .article-single").append("<a style='margin-top:5px;' class='home-news-archive' target='_blank' href='/2/OnePane/162/1/News/5/174.aspx' >آرشیو اخبار</a>");
+
+//$(".one #prjModuleContent174").append("<a class='home-news-archive' target='_blank' href='/2/OnePane/162/1/News/5/174.aspx' >آرشیو اخبار</a>");
+
+    var $fixedMenu = $('.desktop-nav').clone();
+    $fixedMenu.addClass("desktop-nav-fixed").hide();
+    $(".theme-content").prepend($fixedMenu);
+    //$fixedMenu.hide();
+     headerContainerHeight = $("header").height();
+
+   
+
+    $(".c-hamburger, .mobile-menu-bg").click(function () {
+        if ($(".c-hamburger").hasClass("is-active")) {
+            $(".mobile-menu").removeClass("active");
+            $(".c-hamburger").removeClass("is-active");
+            $(".mobile-menu-bg").fadeOut();
+                        $(".theme-content").removeClass("blur-filter");
+            //$("body,html").css("overflow", "auto");
+        } else {
+            $(".mobile-menu").addClass("active");
+            $(".c-hamburger").addClass("is-active");
+            $(".mobile-menu-bg").fadeIn();
+                        $(".theme-content").addClass("blur-filter");
+            //$("body,html").css("overflow", "hidden");
+        }
+    });
+
+    addClasses($(".navbar-collapse"), 1);
+
+    $(".mobile-menu").prepend($(".navbar-collapse").html());
+    $(".mobile-menu").find(".fa-chevron-down").addClass("fa-rotate-90");
+
+    function addClasses(parentNode, level) {
+        parentNode.find(">ul>li").each(function () {
+
+            if ($(this).find(">ul").length > 0) {
+                $(this).addClass("has-child");
+               $(this).find(">a").append("<i class=\"fa fa-chevron-down fa-fw\"></i>");
+				//  $(this).find(">a").append("<img class='menu-navigate' src='/Public/11/Skins/Images/Default/images/menu-navigate.png'>");
+			
+            }
+
+            $(this).addClass("level-" + level);
+            $(this).attr("data-level", level);
+            addClasses($(this), level + 1);
+        });
+    }
+
+    $(".mobile-menu a").addClass("button-animate");
+
+    $(".mobile-menu .has-child>a").click(function (e) {
+        e.preventDefault();
+
+        var chilren = $(this).next("ul");
+        var level = $(this).closest(".has-child").attr("data-level");
+        $(".mobile-menu [data-level='" + level + "']").find("ul").slideUp();
+        $(".mobile-menu [data-level='" + level + "']").find("a>.fa-chevron-down").addClass("fa-rotate-90");
+
+        if (chilren.is(":visible")) {
+            $(this).removeClass("expanded");
+            chilren.slideUp();
+            $(this).find(".fa").addClass("fa-rotate-90");
+        } else {
+            $(this).addClass("expanded");
+            chilren.slideDown();
+            $(this).find(".fa").removeClass("fa-rotate-90");
+        }
+    });
+
+    $(".desktop-nav .level-1").hover(function () {
+        $(this).find(">ul").slideDown(300);
+    }, function () {
+        $(this).find(">ul").hide();
+    });
+
+
+
+    $(".responsive-tab-shadow").each(function () {
+
+        $(this).append("<a class=\"tab-shadow-next  \" href=\"javascript:void(0);\"><img src='/Public/11/Skins/Images/default/Images/tab-prev-btn.png'/></a><a class=\"tab-shadow-prev \" href=\"javascript:void(0);\"><img src='/Public/11/Skins/Images/default/Images/tab-next-btn.png'/></a>");
+
+        var tabButtons = $(".responsive-tab-shadow .tab-buttons>ul");
+        var tabPages = $(".responsive-tab-shadow .tab-pages");
+
+        tabButtons.find(">li").each(function () {
+
+            $(this).find("a").attr("data-index", $(this).index());
+            $(this).find("a").append("<span class='down-arrow'></span>");
+            var img = $(this).find("img");
+            img.addClass("black-icon");
+            if (img.length > 0)
+                img.after("<img class='red-icon' src='" + img.attr("src").replace("black.", "red.") + "' />");
+        });
+
+        tabPages.find(">div").each(function () {
+            $(this).attr("data-index", $(this).index());
+        });
+
+        tabButtons.addClass("owl-carousel");
+        tabPages.addClass("owl-carousel");
+
+        tabButtons.each(function () {
+            $(this).addClass("owl-carousel");
+        });
+
+        tabPages.each(function () {
+            $(this).addClass("owl-carousel");
+        });
+
+        window.pagesOwlOption = {
+            loop: true,
+            items: 5,
+            center: true,
+            rewind: false,
+            mouseDrag: false,
+            touchDrag: false,
+            pullDrag: false,
+            smartSpeed: 600,
+            responsive: {
+                0: {
+                    items: 3
+                },
+                800: {
+                    items: 5
+                }
+            }
+        };
+
+        window.buttonsOwl = tabButtons.owlCarousel(window.pagesOwlOption);
+
+        window.pagesOwl = tabPages.owlCarousel({
+            items: 1,
+            loop: true,
+            rewind: false,
+            mouseDrag: false,
+            touchDrag: false,
+            pullDrag: false,
+            smartSpeed: 600
+        });
+
+        tabPages.owlCarousel({
+            items: 1
+        });
+         window.buttonsOwl.on('changed.owl.carousel', function(event) {
+	var isIE=/*@cc_on!@*/false||!!document.documentMode;
+var width=$(document).width();
+var tabindex=event.item.index+(width<800?1:0);
+
+      if(isIE){
+	
+	if(tabindex!=9){
+		$(".tab-pages .owl-item:eq(8)").css("visibility","hidden");
+
+		}
+	else{
+	$(".tab-pages .owl-item:eq(8)").css("visibility","visible");
+
+
+	}
+  }	
+	
+		
+	
+})
+        $(".tab-shadow-next").click(function () {
+            buttonsOwl.trigger('next.owl.carousel');
+            tabPages.trigger('next.owl.carousel');
+        });
+
+        $(".tab-shadow-prev").click(function () {
+            buttonsOwl.trigger('prev.owl.carousel');
+            tabPages.trigger('prev.owl.carousel');
+        });
+
+        $(".tab-buttons").click(function (e) {
+            var link = $(e.target).closest("a");
+            if 
+(link.length === 0)
+                return;
+            buttonsOwl.trigger('to.owl.carousel', link.attr("data-index"));
+            pagesOwl.trigger('to.owl.carousel', link.attr("data-index"));
+        });
+
+    });
+
+    $(window).resize(function () {
+        clearTimeout($.data(this, 'windowResizeTimer'));
+        $.data(this, 'windowResizeTimer', setTimeout(function () {
+            window.buttonsOwl.trigger('destroy.owl.carousel');
+            window.buttonsOwl.html(window.buttonsOwl.find('.owl-stage-outer').html()).removeClass('owl-loaded');
+            window.buttonsOwl.owlCarousel(window.pagesOwlOption);
+        }, 60));
+    });
+
+
+    $(".home-slider").owlCarousel({
+        items: 1,
+        loop: true,
+        center: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 7000,
+        mergeFit: true,
+		smartSpeed:700,
+        nav: false
+    });
+
+    $(".home-bottom-slider").owlCarousel({
+        items: 4,
+        responsiveClass: true,
+        loop: true,
+        center: false,
+        dots: false,
+        autoplay: true,
+        nav: true,
+        autoWidth: false,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            900: {
+                items: 4
+            }
+        }
+    });
+
+
+    $(".go-to-top").click(function () {
+        $('html, body').stop().animate({ 'scrollTop': 0 }, 700, 'easeOutQuad', function () { });
+    });
+
+  
+
+    $(".button-animate").mouseup(function (e) {
+        var o = $(this).offset();
+        var x = e.pageX - o.left;
+        var y = e.pageY - o.top;
+
+        var animateElement = $("<span class='button-animate-light'></span>");
+        animateElement.css({ left: x - 25, top: y - 25 });
+        animateElement.css({ width: 50, height: 50 });
+        $(this).append(animateElement);
+
+        animateElement.animate({
+            height: 600,
+            width: 600,
+            top: y - 300,
+            left: x - 300,
+            opacity: 0
+        }, 500, 'easeInQuad', function () { animateElement.remove(); });
+    });
+
+
+});
+
+
+
+$(window).scroll(function () {
+    var scrollTop = $(this).scrollTop();
+    $(".mobile-fixed-menu").toggleClass("is-fixed", scrollTop > 10);
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function () {
+
+        if (scrollTop > 40)
+            $('.go-to-top').fadeIn();
+        else
+            $('.go-to-top').fadeOut();
+
+
+        if ($(window).scrollTop() > headerContainerHeight && $("#ribbon-bar").length < 1) {
+            $(".desktop-nav-fixed").css({ "display": 'block' });
+           
+        } else {
+            $(".desktop-nav-fixed").css({ "display": 'none' });
+        }
+    }, 60));
+
+
+
+
+
+
+
+});
+
+
+$(window).on('load',function () {
+  
+   
+    breadcrumbs = function () {
+        var x = $('.breadcrumbs');
+        x.prepend("<a href='/home.aspx'><img style='height:25px;' src='/Public/11/Skins/Images/default/Images/homeIcon.png' title='صفحه اصلی' /></a>");
+        x.prepend("<img/>");
+		var imgSrc = "/Public/11/Skins/Images/default/BreadCrumbs.png";
+        $(".breadcrumbs > img").attr("src", imgSrc);
+    }
+    breadcrumbs();
+
+
+   
+});
+

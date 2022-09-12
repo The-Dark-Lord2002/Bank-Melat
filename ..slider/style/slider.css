@@ -1,0 +1,87 @@
+ 
+        #slider {
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ccc;
+            width: 871px;
+            height: 360px;
+            margin: 100px auto;
+            border-radius: 10px;
+        }
+        
+        #slider>#gal {
+            border-spacing: 0;
+            position: relative;
+            transition: 0.5s;
+            left: 0;
+            margin-top: -14px;
+            width: 800%;
+            height: 99%;
+        }
+        
+        #slider>#gal>.items {
+            width: 12.5%;
+            height: 100%;
+            float: left;
+        }
+        
+        #slider>#gal>.items>img {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #slider>#right {
+            position: absolute;
+            top: 300px;
+            border: 2px solid #fff;
+            background: url("../img/slider/right.png") no-repeat 65%;
+            background-size: 50%;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            opacity: 0.3;
+            right: 400px;
+            transition: 0.3s;
+        }
+        
+        #slider:hover>#right {
+            opacity: 1;
+            transition: 0.3s;
+            transform: scale(1.5) rotate(720deg);
+        }
+        
+        #slider>#left {
+            position: absolute;
+            top: 300px;
+            border: 2px solid #fff;
+            background: url("../img/slider/left.png") no-repeat 40%;
+            background-size: 50%;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            opacity: 0.3;
+            left: 400px;
+            transition: 0.5s;
+        }
+        
+        #slider:hover>#left {
+            opacity: 1;
+            transition: 0.3s;
+            transform: scale(1.5) rotate(-720deg);
+        }
+        
+        #slider>#gal>.items:hover>p {
+            top: 20px;
+        }
+        
+        #slider>#gal>.items>p {
+            transition: 0.5s 0.5s;
+            position: relative;
+            top: -255px;
+            left: -70px;
+            background: rgba(255, 255, 255, 0.1);
+            height: 100px;
+            transform: rotate(30deg);
+        }

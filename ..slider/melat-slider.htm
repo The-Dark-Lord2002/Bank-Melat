@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="style/slider.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="slider">
+        <p class="light"></p>
+        <div id="gal">
+
+            <div class="items">
+                <img src="img/slider/01.jpg">
+                <p></p>
+            </div>
+            <div class="items">
+                <img src="img/slider/02.jpg">
+                <p></p>
+            </div>
+            <div class="items">
+                <img src="img/slider/03.jpg">
+                <p></p>
+            </div>
+            <div class="items">
+                <img src="img/slider/04.jpg">
+                <p></p>
+            </div>
+            <div class="items">
+                <img src="img/slider/05.jpg">
+                <p></p>
+            </div>
+            <div class="items">
+                <img src="img/slider/06.jpg">
+                <p></p>
+            </div>
+            <div class="items">
+                <img src="img/slider/07.jpg">
+                <p></p>
+            </div>
+
+            <div class="items">
+                <img src="img/slider/08.jpg">
+                <p></p>
+            </div>
+
+        </div>
+        <div id="right"> </div>
+        <div id="left"> </div>
+
+    </div>
+    <script>
+        pos = 0;
+
+        right.onclick = function() {
+            if (pos > -700) {
+                pos = pos - 100;
+                gal.style.left = pos + "%";
+            } else if (pos == -400) {
+                pos = 0;
+                gal.style.left = pos + "%";
+            }
+        }
+
+        left.onclick = function() {
+            if (pos < 0) {
+                pos = pos + 100;
+                gal.style.left = pos + "%";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
