@@ -3,17 +3,17 @@
     margin-top: -80px;
     margin-bottom: 0px;
     direction: ltr;
-    //border: 3px solid red;
+    /*border: 3px solid red;*/
     height: 440px;
     position: relative;
-    // width: 1100px;
+    /*width: 1100px;*/
 }
 
 #slider2 {
     overflow: hidden;
     position: relative;
     box-shadow: 2px 0px 10px 1px #ccc, -2px 0px 10px 1px #ccc;
-    //border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     width: 1100px;
     height: 400px;
     margin: 100px auto;
@@ -24,7 +24,7 @@
     transition: 0.5s;
     position: relative;
     left: 0%;
-    // border: 1px solid red;
+    /* border: 1px solid red;*/
     width: 500%;
     height: 100%;
 }

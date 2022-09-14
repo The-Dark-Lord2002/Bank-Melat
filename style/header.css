@@ -68,7 +68,7 @@
 }
 
 
-/****/
+/**/
 
 #navigatemenu {
     height: 60px;
@@ -78,7 +78,7 @@
     font: 16px Mj_Flow, tahoma;
     top: 0;
     position: sticky;
-    //overflow: hidden;
+    /*overflow: hidden;*/
     z-index: 100;
     box-shadow: 2px 3px 4px 0 rgb(0 0 0 / 20%);
 }
@@ -96,7 +96,7 @@ ul.menu {
     background-color: #e7e7e7;
     text-align: center;
     align-items: center;
-    //border: 2px solid green;
+    /*border: 2px solid green;*/
 }
 
 
@@ -160,11 +160,11 @@ ul.menu>li.container {
 li.container:hover>.submenu {
     visibility: visible;
     transition: 1s;
-    // height: auto;
+    /* height: auto;*/
     min-height: 300px;
     max-height: 1200px;
     transition: 1s;
-    // top: 61px;
+    /* top: 61px;*/
 }
 
 li.container>.submenu {
@@ -187,15 +187,15 @@ li.container>.submenu {
     overflow-y: auto;*/
     transition: 1s;
     /*change height in as you like (me:minimim height)*/
-    //transition: 0.1s;
-    //overflow-x: hidden;
-    // overflow-y: scroll;
+    /*transition: 0.1s;*/
+    /*overflow-x: hidden;*/
+    /* overflow-y: scroll;*/
     overflow: hidden;
-    //overflow: scroll;
+    /*overflow: scroll;*/
 }
 
 .submenu>ul {
-    //border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
     float: right;
     margin-right: -32px;
 }
@@ -207,7 +207,7 @@ ul>li.sub {
     color: #55595C;
     list-style: none;
     height: 30px;
-    // border: 1px solid brown;
+    /* border: 1px solid brown;*/
 }
 
 li.sub>h3 {
