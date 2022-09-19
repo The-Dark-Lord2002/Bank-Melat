@@ -79,7 +79,6 @@
 
 #footer>.footer-column>a:visited {
     user-select: none;
-    color: #ffffff;
     transition: color 0.3s;
     text-decoration: none;
 }
