@@ -165,9 +165,12 @@ li.container:hover>.submenu {
     max-height: 1200px;
     transition: 1s;
     /* top: 61px;*/
+    box-shadow: 0px -1px 10px 1px red inset;
 }
 
 li.container>.submenu {
+    border-radius:3px;
+    transition: 0.3s;
     top: 61px;
     z-index: -50;
     padding-right: -50px;
@@ -175,7 +178,6 @@ li.container>.submenu {
     max-height: 0px;
     right: 66px;
     position: absolute;
-    border: 2px solid #ccc;
     box-shadow: 0px -1px 10px 1px red inset;
     width: 958px;
     background-color: rgb(231, 231, 231, 0.96);
@@ -185,13 +187,14 @@ li.container>.submenu {
     visibility: hidden;
     /*  height: 0px;
     overflow-y: auto;*/
-    transition: 1s;
+    
     /*change height in as you like (me:minimim height)*/
     /*transition: 0.1s;*/
     /*overflow-x: hidden;*/
     /* overflow-y: scroll;*/
     overflow: hidden;
     /*overflow: scroll;*/
+    //border: 2px solid #ccc;
 }
 
 .submenu>ul {
