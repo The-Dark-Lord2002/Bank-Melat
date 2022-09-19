@@ -68,7 +68,7 @@
 }
 
 
-/**/
+
 
 #navigatemenu {
     height: 60px;
@@ -81,10 +81,6 @@
     /*overflow: hidden;*/
     z-index: 100;
     box-shadow: 2px 3px 4px 0 rgb(0 0 0 / 20%);
-}
-
-#navigation>.menu>.no-container{
-    cursor: pointer;
 }
 
 ul.menu {
@@ -173,7 +169,7 @@ li.container:hover>.submenu {
 }
 
 li.container>.submenu {
-    border-radius:3px;
+    border-radius: 3px;
     transition: 0.3s;
     top: 61px;
     z-index: -50;
@@ -191,7 +187,7 @@ li.container>.submenu {
     visibility: hidden;
     /*  height: 0px;
     overflow-y: auto;*/
-    
+
     /*change height in as you like (me:minimim height)*/
     /*transition: 0.1s;*/
     /*overflow-x: hidden;*/
