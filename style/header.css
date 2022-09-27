@@ -84,6 +84,7 @@
 }
 
 ul.menu {
+    user-select: none;
     /*
     overflow: hidden;
     */
@@ -109,11 +110,14 @@ ul.menu>li {
 ul.menu>li {
     display: inline-block;
     margin: 0px 0px 0px 13px;
+    
 }
 
 
 /********/
-
+ul.menu>li>a{
+padding: 17px 0px;
+}
 ul.menu>li>a:link {
     text-decoration: none;
     color: #444648;
@@ -128,13 +132,14 @@ ul.menu>li>a:visited {
     text-decoration: none;
     color: #444648;
 }
-
-ul.menu>li:hover {
+ul.menu>li:hover>a {
     text-decoration: none;
     color: red;
 }
 
+
 ul.menu>li:hover {
+    cursor: pointer;
     transition: 0.3s;
     border-bottom: 3px solid red;
     color: red;
@@ -159,7 +164,7 @@ ul.menu>li.container {
 
 li.container:hover>.submenu {
     visibility: visible;
-    transition: 1s;
+
     /* height: auto;*/
     min-height: 300px;
     max-height: 1200px;
@@ -170,7 +175,7 @@ li.container:hover>.submenu {
 
 li.container>.submenu {
     border-radius: 3px;
-    transition: 0.3s;
+    transition: 0.5s;
     top: 61px;
     z-index: -50;
     padding-right: -50px;

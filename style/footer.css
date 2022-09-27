@@ -112,6 +112,7 @@
 
 #footer-nav>.nav>a:visited {
     text-decoration: none;
+    color: #a0a1a2;
 }
 
 #footer-nav>.nav>a:hover {
