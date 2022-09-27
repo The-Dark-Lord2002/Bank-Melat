@@ -1,6 +1,11 @@
-@media screen and (max-width:700px) {
-    #content {
-        width: 100%;
+@media screen and (max-width:600px) and (orientation:landscape) {
+    body {
+        background: LimeGreen;
     }
+}
 
+@media screen and (max-width:600px) and (orientation:portrait) {
+    body {
+        background: RoyalBlue;
+    }
 }
