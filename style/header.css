@@ -1,16 +1,90 @@
 #header>.top {
+    border-top: 0.5px solid #55595C;
+    box-shadow: 0px -2px 5px #55595C;
+    top: 0;
     height: 136px;
     width: 1100px;
     margin: 0 auto;
     position: absolute;
-    right: 80px;
+
     bottom: 0;
     margin: 1px auto;
     z-index: 110;
 }
 
+#header>.top>.call {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    margin: 0px;
+    width: 361px;
+    height: 48px;
+    background-color: #444648;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px inset #fff;
+}
+
+#header>.top>.call>a>div {
+
+    margin-left: 4.2px;
+    margin-top: 5px;
+    text-align: center;
+    float: left;
+    width: 115px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: mj;
+    font-size: 17px;
+    text-shadow: 1px 1px #676660;
+}
+
+
+
+#header>.top>.call>a>.int1:hover {
+
+    background-image: linear-gradient(rgb(221, 163, 19), rgb(253, 225, 126));
+
+}
+
+#header>.top>.call>a>.int1 {
+
+    background-image: linear-gradient(rgb(253, 225, 126), rgb(221, 163, 19));
+    box-shadow: 0px 4px 0px 0px #a05210;
+}
+
+#header>.top>.call>a>.int2:hover {
+
+    background-image: linear-gradient(rgba(255, 120, 0, 1), rgba(254, 150, 50, 1));
+
+}
+
+#header>.top>.call>a>.int2 {
+
+    background-image: linear-gradient(rgb(253, 153, 60), rgba(255, 120, 0, 1));
+    box-shadow: 0px 4px 0px 0px #a05210;
+}
+
+#header>.top>.call>a>.int3:hover {
+
+    background-image: linear-gradient(rgba(198, 0, 0, 1), rgba(247, 68, 53, 1));
+
+}
+
+#header>.top>.call>a>.int3 {
+
+    background-image: linear-gradient(rgba(247, 68, 53, 1), rgba(198, 0, 0, 1));
+    box-shadow: 0px 4px 0px 0px #8a0505;
+}
+
+
+/****LOGO****/
+/****LOGO****/
+/****LOGO****/
+/****LOGO****/
 #header>.top>.symbol {
-    height: 136px;
+    height: 133.5px;
     width: 312px;
     background-image: url("../img/header/01.png");
     background-repeat: no-repeat;
@@ -23,24 +97,28 @@
 
 #header>.top>.symbol>a {
     position: absolute;
-    height: 80px;
+    height: 90px;
     width: 300px;
+
     bottom: 0;
     right: 0;
     margin: 1px auto;
 }
 
 
-/* #55595C; */
-
+/******search********/
+/******search********/
+/******search********/
+/******search********/
 #header>.top>.search {
-    width: 200px;
-    height: 29px;
+    width: 240px;
+    height: 31px;
     position: absolute;
     margin-top: 70px;
-    right: 71%;
+    left: 7%;
     overflow: hidden;
     border-radius: 1em;
+    // border: 0.1px solid red;
 }
 
 #header>.top>.search>input:focus {
@@ -54,28 +132,29 @@
     font-size: medium;
     right: 40%;
     margin-right: -3px;
-    margin-top: -3px;
+    margin-top: -2px;
     border: 2px solid #55595C;
     position: relative;
     background-image: url("../img/header/search-icon-16.png");
     background-repeat: no-repeat;
     background-position: center right;
-    line-height: 29px;
+    line-height: 28px;
     padding-right: 25px;
     border-radius: 1em;
     outline: none;
     background-color: #444648;
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 20%) inset, 0px -1px 1px rgb(255 255 255 / 20%) inset;
 }
 
-
-
-
+/****navigatemenu****/
+/****navigatemenu****/
+/****navigatemenu****/
 #navigatemenu {
     height: 60px;
     color: #55595c;
     background-color: #e7e7e7;
     font-weight: normal;
-    font: 16px Mj_Flow, tahoma;
+    font-family: mj;
     top: 0;
     position: sticky;
     /*overflow: hidden;*/
@@ -110,14 +189,15 @@ ul.menu>li {
 ul.menu>li {
     display: inline-block;
     margin: 0px 0px 0px 13px;
-    
+
 }
 
 
 /********/
-ul.menu>li>a{
-padding: 17px 0px;
+ul.menu>li>a {
+    padding: 17px 0px;
 }
+
 ul.menu>li>a:link {
     text-decoration: none;
     color: #444648;
@@ -132,6 +212,7 @@ ul.menu>li>a:visited {
     text-decoration: none;
     color: #444648;
 }
+
 ul.menu>li:hover>a {
     text-decoration: none;
     color: red;
@@ -164,14 +245,17 @@ ul.menu>li.container {
 
 li.container:hover>.submenu {
     visibility: visible;
-
+    max-height: 400px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
     /* height: auto;*/
-    min-height: 300px;
-    max-height: 1200px;
+    /* min-height: 300px;
+    max-height: 1200px;*/
     transition: 1s;
     /* top: 61px;*/
     box-shadow: 0px -1px 10px 1px red inset;
 }
+
 
 li.container>.submenu {
     border-radius: 3px;
@@ -196,7 +280,7 @@ li.container>.submenu {
     /*change height in as you like (me:minimim height)*/
     /*transition: 0.1s;*/
     /*overflow-x: hidden;*/
-    /* overflow-y: scroll;*/
+    overflow-y: scroll;
     overflow: hidden;
     /*overflow: scroll;*/
     /*border: 2px solid #ccc;*/
@@ -209,6 +293,7 @@ li.container>.submenu {
 }
 
 ul>li.sub {
+    font-family: yek;
     height: 30px;
     line-height: 30px;
     width: 223px;
@@ -219,6 +304,7 @@ ul>li.sub {
 }
 
 li.sub>h3 {
+    font-family: mj;
     color: red;
     font-size: 12px;
 }
@@ -232,4 +318,27 @@ a:hover {
 
 li.sub>a {
     font-size: 11px;
+}
+
+/********SCROLL*******/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(248, 25, 0);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(223, 79, 79, 0.4);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(223, 79, 79, 0.6);
 }

@@ -3,10 +3,11 @@
     font-family: tahoma;
     background-image: url("../img/footer/header_bg.jpg");
     border-top: 2px solid #e30613;
-    margin-top: 170px;
+    margin-top: 150px;
 }
 
 #footer>.footer-column {
+
     width: 21%;
     float: right;
     margin-left: 2%;
@@ -15,7 +16,8 @@
 }
 
 #footer>.footer-column>h3 {
-    font: 14px tahoma;
+    font: 14px;
+
     color: #ffffff;
     border-bottom: 1px solid #f4f4f4;
     padding: 0px;
@@ -26,6 +28,7 @@
 }
 
 #footer>.footer-column>a {
+
     border-bottom: 1px dotted #898989;
     color: #a0a1a2;
     height: 44px;
@@ -84,6 +87,7 @@
 }
 
 #footer-nav {
+    font-family: mj;
     width: 1100px;
     height: 25px;
     position: absolute;

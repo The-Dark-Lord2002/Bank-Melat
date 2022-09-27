@@ -1,3 +1,20 @@
+play1();
+slider.onmouseover = function () {
+    pause1()
+}
+slider.onmouseout = function () {
+    play1();
+}
+var m;
+function play1() {
+    m = setInterval("go_right1()", 1800)
+}
+function pause1() {
+    clearInterval(m)
+}
+
+
+
 pos = 0;
 
 function move(i) {
@@ -14,7 +31,8 @@ document.getElementsByClassName("bbc" + i).onclick {
         document.getElementsByClassName("bbc" + i)[0].style.backgroundColor = "orange";
     }
 }*/
-right1.onclick = function() {
+right1.onclick = go_right1;
+function go_right1() {
     if (pos > -700) {
         pos = pos - 100;
         gal.style.left = pos + "%";
@@ -26,13 +44,13 @@ right1.onclick = function() {
     }
 }
 
-left1.onclick = function() {
-        if (pos < 0) {
-            pos = pos + 100;
-            gal.style.left = pos + "%";
-        } else if (pos == 0) {
-            pos = -700;
-            gal.style.left = pos + "%"
-        }
+left1.onclick = function () {
+    if (pos < 0) {
+        pos = pos + 100;
+        gal.style.left = pos + "%";
+    } else if (pos == 0) {
+        pos = -700;
+        gal.style.left = pos + "%"
     }
+}
     /*****************************/

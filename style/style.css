@@ -1,6 +1,9 @@
     body {
-        margin: 0px;
+        margin: 0;
+
     }
+
+
 
     #header {
         background-color: #55595C;
@@ -61,9 +64,11 @@
 
     #content>.minislider {
         /*border: 1px solid red;*/
+
         width: 1100px;
-        height: 300px;
+        height: 280px;
         margin: 1px auto;
+
     }
 
     #footer {
