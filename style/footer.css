@@ -16,8 +16,8 @@
 }
 
 #footer>.footer-column>h3 {
-    font: 14px;
-
+    font-size: 14px;
+    font-weight: 100;
     color: #ffffff;
     border-bottom: 1px solid #f4f4f4;
     padding: 0px;

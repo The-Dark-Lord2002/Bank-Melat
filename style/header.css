@@ -6,11 +6,45 @@
     width: 1100px;
     margin: 0 auto;
     position: absolute;
-
     bottom: 0;
     margin: 1px auto;
     z-index: 110;
+    background-image: url("../img/header/01.png");
+    background-repeat: no-repeat;
+    background-position: 90% 95%;
+    background-size: 27%;
 }
+
+#header>.top>.date-lang {
+    position: absolute;
+    top: 0;
+    right: 80px;
+}
+
+#header>.top>.date-lang>span,
+#header>.top>.date-lang>a {
+    position: relative;
+    background-color: #444648;
+    border: 1px solid #777a7d;
+
+    color: #aaaaaa;
+    padding: 2px 9px;
+    border-radius: 0px 0px 5px 5px;
+    font-size: 13px;
+    font-family: yek;
+    text-decoration: none;
+}
+
+#header>.top>.date-lang>a {
+    cursor: pointer;
+
+}
+
+
+
+
+/******Call****/
+
 
 #header>.top>.call {
     position: absolute;
@@ -83,26 +117,18 @@
 /****LOGO****/
 /****LOGO****/
 /****LOGO****/
-#header>.top>.symbol {
-    height: 133.5px;
-    width: 312px;
-    background-image: url("../img/header/01.png");
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 100% auto;
-    float: right;
-    position: relative;
-    margin: 1px auto;
-}
 
-#header>.top>.symbol>a {
+
+
+#header>.top>.symbol {
     position: absolute;
     height: 90px;
-    width: 300px;
+    width: 290px;
 
     bottom: 0;
-    right: 0;
+    right: 85px;
     margin: 1px auto;
+    /* border: 1px solid red;*/
 }
 
 
@@ -153,7 +179,8 @@
     height: 60px;
     color: #55595c;
     background-color: #e7e7e7;
-    font-weight: normal;
+    font-weight: 590;
+    font-size: 17px;
     font-family: mj;
     top: 0;
     position: sticky;
