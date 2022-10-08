@@ -1,50 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+<!--meta tag-->
+<title>بانک ملت</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Ali Najafi">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="og:title" content="Ali Najafi | Web Developer" />
+<meta name="og:site_name" content="Ali Najafi" />
+<meta name="og:description" content="" />
+<meta name="og:image" content="http://sitename.com/pic/site_im.jpg" />
+<link rel="shortcut icon" type="image/x-icon" href="img/icon/mellat.ico" />
+<link rel="apple-touch-icon image_src" href="img/icon/mellat.png">
 
 <head>
-    <link rel="stylesheet" href="style/responsive.css">
-    <link rel="stylesheet" href="style/style.css">
+
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/content-slider.css">
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/mini-slider.css">
     <link rel="stylesheet" href="style/content-slider2.css">
+    <link rel="stylesheet" href="style/responsive.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        * {
+            text-decoration: none;
+        }
+
         @font-face {
             font-family: mj;
             src: url(fonts/Mj\ flow.ttf)
         }
 
         @font-face {
-            src: url(fonts/Yekan.ttf);
-            font-family: yek;
+            font-family: yekan;
+            src: url(fonts/Yekan.ttf)
         }
 
+
         #myBtn {
-            width: 16px;
-            height: 16px;
-            display: none;
+            width: 14px;
+            height: 14px;
+
             position: fixed;
-            bottom: 20px;
+            bottom: 0px;
             right: 30px;
             z-index: 99;
             border: none;
             outline: none;
-            background: orange url(img/top.png) no-repeat 50% 50%;
-            background-size: contain;
+            background: rgb(255, 120, 1, 0.6) url(img/top.png) no-repeat 50% 50%;
+            background-size: 50% 30%;
             color: white;
+            border: 2.1px solid rgb(255, 255, 255, 0.6);
             cursor: pointer;
             padding: 15px;
             border-radius: 50%;
-            border: 5px solid #fff;
             font-size: 18px;
-            opacity: 0.55;
+            opacity: 0.9;
+            box-shadow: 0px 30px 20px orange;
+            transition: 0.2s;
+            visibility: hidden;
+            z-index: 800;
+
         }
 
         #myBtn:hover {
-            background-color: orange;
+            border: 2.1px solid rgb(255, 255, 255, 1);
+            background-color: #FF7801;
             opacity: 1;
             /* Add a dark-grey background on hover */
         }
@@ -52,39 +77,48 @@
         #myBtn>img {
             width: 25px;
         }
+
+        #myBtn.show {
+            transition: 0.5s;
+            box-shadow: 0px 29px 24px transparent;
+            bottom: 40px;
+            visibility: visible;
+        }
     </style>
 </head>
 
 <body>
+    <div id="res100"></div>
     <div id="header">
-        <div class="top">
-            <div class="date-lang">
-                <span class="date">پنج شنبه 7 مهر ۱۴۰۱</span>
+        <div class="top-hold">
+            <div class="top">
+                <div class="date-lang">
+                    <span class="date">پنج شنبه 7 مهر ۱۴۰۱</span>
+                    <a href="https://www.google.com/">En</a>
+                </div>
+                <div class="call">
+                    <a href="#">
+                        <div class="int1">بانک پلاس</div>
+                    </a>
+                    <a href="#">
+                        <div class="int2">همراه بانک ملت</div>
+                    </a>
+                    <a href="#">
+                        <div class="int3">بانکداری اینترنتی</div>
+                    </a>
+                </div>
 
-                <a href="https://www.google.com/">En</a>
+
+
+                <a class="symbol" href="main.htm"></a>
+
+                <div class="search"><input type="search"></div>
             </div>
-            <div class="call">
-                <a href="#">
-                    <div class="int1">بانک پلاس</div>
-                </a>
-                <a href="#">
-                    <div class="int2">همراه بانک ملت</div>
-                </a>
-                <a href="#">
-                    <div class="int3">بانکداری اینترنتی</div>
-                </a>
-            </div>
-
-
-
-            <a class="symbol" href="main.htm"></a>
-
-            <div class="search"><input type="search"></div>
         </div>
     </div>
     <div id="navigatemenu">
         <ul class="menu">
-            <li class="no-container"><a href="#">صفحه اصلی</a></li>
+            <li class="no-container">صفحه اصلی</li>
             <li class="container">درباره ملت
                 <div class="submenu">
                     <ul>
@@ -669,14 +703,14 @@
                     </ul>
                 </div>
             </li>
-            <li class="no-container"><a href="#">باشگاه مشتریان ملت</a></li>
-            <li><a href="#">آگاهی رسانی امنیت اطلاعات</a></li>
+            <li class="no-container">باشگاه مشتریان ملت</li>
+            <li>آگاهی رسانی امنیت اطلاعات</li>
         </ul>
     </div>
     <div id="content">
         <div id="slider">
             <p class="light"></p>
-            <div id="gal">
+            <div id="Gal">
 
                 <div class="items">
                     <img src="img/slider/01.jpg">
@@ -713,79 +747,204 @@
                 </div>
 
             </div>
-            <div id="right1"> </div>
-            <div id="left1"> </div>
+            <div id="butt">
+                <div class="select" onclick="move(0)"> </div>
+                <div onclick="move(1)"> </div>
+                <div onclick="move(2)"> </div>
+                <div onclick="move(3)"> </div>
+                <div onclick="move(4)"> </div>
+                <div onclick="move(5)"> </div>
+                <div onclick="move(6)"> </div>
+                <div onclick="move(7)"> </div>
+
+            </div>
+            <div id="Right"> </div>
+            <div id="Left"> </div>
         </div>
 
-        <ul id="but">
-            <li class="bbc0" onclick="move(0)">
-                <p class="bot"><input type="button"></p>
-            </li>
-            <li class="bbc1" onclick="move(1)">
-                <p class="bot"><input type="button"></p>
-            </li>
-            <li class="bbc2" onclick="move(2)">
-                <p class="bot"><input type="button"></p>
-            </li>
-            <li class="bbc3" onclick="move(3)">
-                <p class="bot"><input type="button"></p>
-            </li>
-            <li class="bbc4" onclick="move(4)">
-                <p class="bot"><input type="button"></p>
-            </li>
-            <li class="bbc5" onclick="move(5)">
-                <p class="bot"><input type="button"></p>
-            </li>
-            <li class="bbc6" onclick="move(6)">
-                <p class="bot"><input type="button"></p>
-            </li>
-            <li class="bbc7" onclick="move(7)">
-                <p class="bot"><input type="button"></p>
-            </li>
-
-        </ul>
 
 
         <div id="slider2">
-
+            <ul id="buto">
+                <li onclick="gogo(0)">
+                    <input type="radio" id="d0" name="r">
+                    <label for="d0"></label>
+                </li>
+                </li>
+                <li onclick="gogo(1)">
+                    <input type="radio" id="d1" name="r">
+                    <label for="d1"></label>
+                </li>
+                <li onclick="gogo(2)">
+                    <input type="radio" id="d2" name="r" checked>
+                    <label for="d2"> </label>
+                </li>
+                <li onclick="gogo(3)">
+                    <input type="radio" id="d3" name="r">
+                    <label for="d3"> </label>
+                </li>
+                <li onclick="gogo(4)">
+                    <input type="radio" id="d4" name="r">
+                    <label for="d4"> </label>
+                </li>
+            </ul>
             <div id="galer">
+                <div class="items">
+                    <div class="it">
+                        <fieldset>
+                            <legend>سامانه مبتنی بر وب</legend>
+                            <a>بانکداری اینترنتی اشخاص حقوقی</a>
+                            <hr>
+                            <a>پیگیری تراکنش های ناموفق</a>
+                            <hr>
+                            <a> سرویس های الکترونیک (بستام)</a>
+
+                            <hr>
+                            <a>کمک به سازمان های حمایتی </a>
+
+                            <hr>
+                            <a>پرداخت اقساط تسهیلات </a>
+
+                            <hr>
+                            <a>توصیه های امنیتی بانکداری اینترنتی</a>
+                            <hr>
+                            <a>سایر</a>
+                        </fieldset>
+                        <fieldset>
+                            <legend>سامانه مبتنی بر تلفن و تلفن همراه</legend>
+                            <a>همراه بانک</a>
+                            <hr>
+                            <a> بانک پلاس</a>
+                            <hr>
+                            <a> همراه پلاس ملت </a>
+                            <hr>
+                            <a>پیام رسان ملت</a>
+                            <hr>
+                            <a>راهنمای خدمت یکبار رمز</a>
+                            <hr>
+                            <a>توصیه های امنیتی سامانه</a>
+                            <hr>
+                            <a>سایر</a>
+                        </fieldset>
+                        <fieldset>
+                            <legend>سایر خدمات الکترونیک</legend>
+                            <a>پیگیری تراکنش های ناموفق(سیام)</a>
+                            <hr>
+                            <a> پایانه های فروش</a>
+                            <hr>
+                            <a>سقف انتقال وجه غیرحضوری </a>
+                            <hr>
+                            <a>امضاء الکترونیک ملت</a>
+                            <hr>
+                            <a>تایید لحظه ای واریز وجه به حساب</a>
+                            <hr>
+                            <a>ملت شاپ</a>
+                            <hr>
+                            <a>سایر</a>
+                        </fieldset>
+                        <fieldset>
+                            <legend>کارت های بانکی</legend>
+                            <a>ملت کارت </a>
+                            <hr>
+                            <a>بن کارت ملت</a>
+                            <hr>
+                            <a>کارت هدیه ملت</a>
+                            <hr>
+                            <a>کارت اعتباری ملت</a>
+                            <hr>
+                            <a>مراکز پشتیبانی کارت ها</a>
+                            <hr>
+                            <a>توصیه های امنیتی کارت های بانکی</a>
+                            <hr>
+                            <a>سایر</a>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="items ">
+                    <div class="it">
+                        <img src="img/slider2/h.png"><img src="img/slider2/i.png">
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="it">
+                        <fieldset>
+                            <legend>*****</legend>
+                            <a class="red">بانک پلاس</a>
+                            <hr>
+                            <a class="red-por">سامانه نوبت دهی غیر حضوری شعب</a>
+                            <hr>
+                            <a>بازار سرویس های تبادل الکترونیک (بستام)</a>
+
+                            <hr>
+                            <a>اطلاع رسانی قانون جدید چک</a>
+
+                            <hr>
+                            <a>شناسه حساب بانکی (شبا)</a>
+
+                            <hr>
+                            <a>آرشیو اخبار</a>
+                            <hr>
+                            <a>رسیدگی به شکایات</a>
+                        </fieldset>
+                        <fieldset>
+                            <legend>*****</legend>
+                            <a>شرکت به پرداخت ملت</a>
+                            <hr>
+                            <a>شرکت بیمه ما</a>
+                            <hr>
+                            <a>شرکت تامین سرمایه بانک ملت</a>
+                            <hr>
+                            <a>شرکت صرافی ملت</a>
+                            <hr>
+                            <a>شرکت واسپاری ملت</a>
+                            <hr>
+                            <a>شرکت کارگزاری بانک ملت</a>
+                            <hr>
+                            <a>بانک ملت در بورس</a>
+                        </fieldset>
+                        <fieldset>
+                            <legend>*****</legend>
+                            <a>ملت شاپ (شبکه شرکای تجاری ملت)</a>
+                            <hr>
+                            <a>باشگاه مشتریان ملت</a>
+                            <hr>
+                            <a>شفافیت مالی</a>
+                            <hr>
+                            <a>فروش سهام عدالت</a>
+                            <hr>
+                            <a>مشاهده وضعیت کد شهاب</a>
+                            <hr>
+                            <a>سامانه سنجش رضایت مشتریان</a>
+                            <hr>
+
+                            <a>بدهکاران کلان بانکی</a>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="it">
+                        <img src="img/slider2/4-akhbar.png">
+                    </div>
+                </div>
 
                 <div class="items">
-                    <img src="slider2/vize-hamkaran.jpg">
+                    <div class="it">
+                        <fieldset>
+                            <legend>سامانه منابع انسانی</legend>
+                            <p> <a href="#">ورود به سامانه متمرکز ویژه همکاران شاغل و بازنشسته بانک_</a>(دسترسی به این
+                                سامانه از ساعت ۷ صبح تا ساعت ۱۸ امکان پذیر است)</p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>نظام پیشنهادها</legend>
+                            <a href="#">ورود به سامانه نظام پیشنهادها</p>
+                        </fieldset>
+                    </div>
                 </div>
 
-                <div class="itscrolly items ">
-                    <img src="slider2/akhbar-h.jpg">
-
-                </div>
-
-                <div class="items">
-                    <img src="slider2/dastresi-sarie.jpg">
-
-                </div>
-
-                <div class="itscrolly items">
-                    <img src="slider2/arze-roz-h.jpg">
-
-                </div>
-
-                <div class="items">
-                    <img src="slider2/khadamat.jpg">
-
-                </div>
 
             </div>
-            <ul id="buto">
-                <li onmouseover="gogo(0)">s </li>
-                <li onmouseover="gogo(1)">اخبار</li>
-                <li onmouseover="gogo(2)"> دسترسی سریع </li>
-                <li onmouseover="gogo(3)"> نرخ ارز روزانه</li>
-                <li onmouseover="gogo(4)"> خدمات </li>
-            </ul>
-
 
         </div>
-
         <div class="minislider">
             <div id="mini-slider">
                 <div id="gallery">
@@ -838,50 +997,57 @@
         </div>
     </div>
     <div id="footer">
-        <div class="footer-column">
-            <h3>درباره ملت</h3>
-            <a href="https://www.bankmellat.ir/Organizational_Structure.aspx">ساختار سازمانی</a>
-            <a href="https://www.bankmellat.ir/newsarchive.aspx">آرشیو اخبار</a>
-            <a href="https://www.bankmellat.ir/Letter_of_commendation.aspx">افتخارات بین المللی</a>
-            <a href="http://www.tsetmc.com/loader.aspx?partree=151311&i=778253364357513">ملت در بورس</a>
-            <a href="https://www.bankmellat.ir/Complaints.aspx">رسیدگی به شکایات</a>
-        </div>
-        <div class="footer-column">
-            <h3>شعب و واحدها</h3>
-            <a href="https://www.bankmellat.ir/Local_branches.aspx">شعب داخلی</a>
-            <a href="https://www.bankmellat.ir/Currency_units.aspx">واحد ها،بخش ها و باجه های ارزی</a>
-            <a href="https://www.bankmellat.ir/bimehma_services.aspx">شعب ارائه دهنده خدمات بیمه ما</a>
-            <a href="https://www.bankmellat.ir/Branches_of_administration_and_management.aspx">ادارات کل و مدیریت های
-                شعب</a>
-            <a href="https://www.bankmellat.ir/mellat_contact_center.aspx"> مرکز ارتباط ملت</a>
-        </div>
-        <div class="footer-column">
-            <h3>سایر</h3>
-            <a href="#">شناسه حساب بانکی (شبا)</a>
-            <a href="#">سامانه الکترونیک بستام</a>
-            <a href="#">مشاهده وضعیت کد شهاب</a>
-            <a href="https://www.bankmellat.ir/Tender.aspx">مناقصه ها و مزایده ها</a>
-            <a href="https://www.bankmellat.ir/Special_Service_Associates.aspx">خدمات ویژه همکاران</a>
-        </div>
+        <div class="footer-hold">
+            <div class="footer-column">
+                <h3>درباره ملت</h3>
+                <a href="https://www.bankmellat.ir/Organizational_Structure.aspx">ساختار سازمانی</a>
+                <a href="https://www.bankmellat.ir/newsarchive.aspx">آرشیو اخبار</a>
+                <a href="https://www.bankmellat.ir/Letter_of_commendation.aspx">افتخارات بین المللی</a>
+                <a href="http://www.tsetmc.com/loader.aspx?partree=151311&i=778253364357513">ملت در بورس</a>
+                <a href="https://www.bankmellat.ir/Complaints.aspx">رسیدگی به شکایات</a>
+            </div>
+            <div class="footer-column">
+                <h3>شعب و واحدها</h3>
+                <a href="https://www.bankmellat.ir/Local_branches.aspx">شعب داخلی</a>
+                <a href="https://www.bankmellat.ir/Currency_units.aspx">واحد ها،بخش ها و باجه های ارزی</a>
+                <a href="https://www.bankmellat.ir/bimehma_services.aspx">شعب ارائه دهنده خدمات بیمه ما</a>
+                <a href="https://www.bankmellat.ir/Branches_of_administration_and_management.aspx">ادارات کل و
+                    مدیریت
+                    های
+                    شعب</a>
+                <a href="https://www.bankmellat.ir/mellat_contact_center.aspx"> مرکز ارتباط ملت</a>
+            </div>
+            <div class="footer-column">
+                <h3>سایر</h3>
+                <a href="#">شناسه حساب بانکی (شبا)</a>
+                <a href="#">سامانه الکترونیک بستام</a>
+                <a href="#">مشاهده وضعیت کد شهاب</a>
+                <a href="https://www.bankmellat.ir/Tender.aspx">مناقصه ها و مزایده ها</a>
+                <a href="https://www.bankmellat.ir/Special_Service_Associates.aspx">خدمات ویژه همکاران</a>
+            </div>
 
-        <div class="footer-logo"></div>
-        <div id="footer-nav">
-            <div class="nav">
-                <a href="#">صفحه اصلی</a>
+            <div class="footer-column">
+
             </div>
-            <div class="nav">
-                <a href="#"> ارتباط با ملت</a>
-            </div>
-            <div class="nav">
-                <a href="#"> پیوندها</a>
-            </div>
-            <div class="nav">
-                <a href="#"> نقشه سایت</a>
+            <div id="footer-nav">
+                <div class="nav-hold">
+                    <div class="nav">
+                        <a href="#">صفحه اصلی</a>
+                    </div>
+                    <div class="nav">
+                        <a href="#"> ارتباط با ملت</a>
+                    </div>
+                    <div class="nav">
+                        <a href="#"> پیوندها</a>
+                    </div>
+                    <div class="nav">
+                        <a href="#"> نقشه سایت</a>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <button onclick="topFunction()" id="myBtn" class=""></button>
 
     <script src="script/slider.js"></script>
     <script src="script/mini-slider.js"></script>
@@ -893,24 +1059,17 @@
             os = -100 * g;
             galer.style.left = os + "%";
         }
+
     </script>
     <script>
-        //Get the button:
-        mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
+            if (window.pageYOffset >= 20) {
+                myBtn.className = "show";
+            }
+            else {
+                myBtn.className = " ";
             }
         }
-
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
             document.body.scrollTop = 0; // For Safari
